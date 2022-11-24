@@ -2,7 +2,6 @@
 ## This project is for Udacity's Front End Nanodegree program. HTML and CSS starter code provided by Udacity but i did some changes.
 
 
-## Table of Contents
 
 
 
@@ -13,7 +12,7 @@ This is a basic landing page that uses Javascript to create a NavBar dynamically
 
 ## Description
 
-Create the Navigation bar dynamically.
-Scroll to any section by clicking on the corresponding element in the Navbar.
-By scrolling, the section in the viewport get detected and stylized.
+Create the Navigation bar dynamically.<br /> 
+Scroll to any section by clicking on the corresponding element in the Navbar.<br /> 
+By scrolling, the section in the viewport get detected and stylized.<br /> 
 
