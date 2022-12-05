@@ -23,6 +23,8 @@ const navbar_list = document.querySelector("#navbar__list");
 // Section Global Var
 const sections = document.querySelectorAll('section');
 
+const nav_link =document.querySelectorAll(".menu__link");
+
 /**
  * End Global Variables
  * Start Helper Functions
@@ -48,24 +50,34 @@ const createNavbarItems = () => {
 createNavbarItems();
 
 
+
+
+
+
+const scrollLinks = document.querySelectorAll('#navbar__list li');
+
+
 // Add class 'active' to section when near top of viewport
 
 const activeSection = () =>{
-    sections.forEach(section =>{
-        if (section.getBoundingClientRect().top <=150 && section.getBoundingClientRect().top>=-400 ){
+  for (let i = 0; i < sections.length; i++) {
+    if (sections[i].getBoundingClientRect().top <=150 && sections[i].getBoundingClientRect().top>=-400 ){
+      sections[i].classList.add("your-active-class");
+      scrollLinks[i].classList.add('active__item');
 
-            section.classList.add("your-active-class");
 
-            
-        }
-        else {
-            section.classList.remove("your-active-class");
-            
-        }
-    });
-};
+    }
+        
+    else {
+      sections[i].classList.remove("your-active-class");
+      scrollLinks[i].classList.remove('active__item');
+
+
+
+            }
+      };
+  }
 window.addEventListener('scroll',activeSection);
-
 
 
 
@@ -78,7 +90,6 @@ window.addEventListener('scroll',activeSection);
 
 
 
-// // Scroll to section on link click
 
 
 
@@ -88,9 +99,12 @@ const scrollToElement = (element) =>
     document.getElementById(destination).scrollIntoView({ behavior: "smooth" });
   }
   
-  document.querySelectorAll(".menu__link").forEach((link) => {
+    nav_link.forEach((link) => {
     link.addEventListener("click",  (e) => {
       e.preventDefault();
       scrollToElement(link);
     });
   });
+
+
+

@@ -74,6 +74,9 @@ section {
 .navbar__menu li {
     display: inline-flex;
     padding-left: 2%;
+    padding-right: 2%;
+
+
 }
 
 .navbar__menu .menu__link {
@@ -87,6 +90,13 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+.active__item {
+    background-color: gray;
+    color: #fff !important;
+    padding: 2%;
+
 }
 
 /* Header Styles */
